@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/fName"
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@drawable/bg_red_rect_21dp"
+        tools:text="fName"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/lName"
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/bg_red_rect_21dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        tools:text="lName" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="0dp"
+            android:onClick="submitsData"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Create" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="GET" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetByID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Get By ID" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userRecyclerView"
+        tools:listitem="@layout/user_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
